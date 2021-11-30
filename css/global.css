@@ -8,7 +8,11 @@
 }
 
 h1 {
-  height: 72px;
+  display:       flex;
+  align-items:   center;
+  height:        72px;
+  border-bottom: 2px solid #ccc;
+  padding:       8px 12px;
 }
 
 #game {
@@ -19,10 +23,10 @@ h1 {
 }
 
 #game .grid {
-  width: 300px;
-  height: 300px;
-  display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  gap: 2px;
+  width:            300px;
+  height:           300px;
+  display:          grid;
+  grid-template:    repeat(3, 1fr) / repeat(3, 1fr);
+  gap:              4px;
   background-color: black;
 }
