@@ -30,3 +30,12 @@ h1 {
   gap:              4px;
   background-color: black;
 }
+
+#game .grid button {
+  cursor: pointer;
+  background-color: white;
+}
+
+#game .grid button:hover {
+  background-color: #ddd;
+}
