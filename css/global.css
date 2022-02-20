@@ -15,14 +15,16 @@ h1 {
   padding:       8px 12px;
 }
 
-#game {
+.game-container {
   display:         flex;
   align-items:     center;
   justify-content: center;
   height:          calc(100vh - 72px);
+  flex-direction:  column;
+  gap:             16px;
 }
 
-#game .grid {
+.game-container .grid {
   width:            300px;
   height:           300px;
   display:          grid;
@@ -31,11 +33,11 @@ h1 {
   background-color: black;
 }
 
-#game .grid button {
+.game-container .grid button {
   cursor: pointer;
   background-color: white;
 }
 
-#game .grid button:hover {
+.game-container .grid button:hover {
   background-color: #ddd;
 }

@@ -1,3 +1,8 @@
+## Unreleased 
+- Extrair classe TicTacToeGame para arquivo próprio
+- Adaptação do projeto para utilizar modules
+- Exibição do jogador atual
+
 ## [0.0.2] 2022-02-12
 - Implementadas as verificações de vitória
 
