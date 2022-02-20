@@ -4,6 +4,8 @@ export default class TicTacToeGame {
   __players = ["X", "O"]
   __currentPlayer = 0
   __victory = false
+  __gameCounter = 0
+  __maxTurns = 8
 
   constructor(container) {
     this.__gameContainer = container
@@ -12,6 +14,10 @@ export default class TicTacToeGame {
     return {
       start: this.start.bind(this),
     }
+  }
+
+  get __drawCondition(){
+    return (!this.__victory && this.__gameCounter > this.__maxTurns)
   }
 
   __verifyVictory() {
@@ -51,16 +57,18 @@ export default class TicTacToeGame {
 
   __handleClickGrid(index) {
     if (this.__grid[index] !== "") return
-    if (this.__victory) return
+    if (this.__victory || this.__drawCondition) return
+
+    this.__gameCounter++
 
     this.__grid[index] = this.__players[this.__currentPlayer]
     
     this.__victory = this.__verifyVictory()
-    console.log(this.__victory)
+    
+    if (!this.__victory)
+      this.__currentPlayer = this.__currentPlayer === 0 ? 1 : 0
     
     this.__render()
-
-    this.__currentPlayer = this.__currentPlayer === 0 ? 1 : 0
   }
 
   __render() {
@@ -91,7 +99,12 @@ export default class TicTacToeGame {
     const displayPlayerContainer = document.createElement("div")
     const span = document.createElement("span")
     span.classList.add("player-display")
-    span.innerText = `${this.__victory ? 'Vencedor' : ' Player'}: ${this.__players[this.__currentPlayer]}`
+    
+    const displayedText = this.__drawCondition ? 
+      "Empate...!" : 
+      `${ this.__victory ? 'Vencedor' : 'Player' }: ${ this.__players[this.__currentPlayer] }`
+      
+    span.innerText = displayedText
 
     displayPlayerContainer.appendChild(span)
 
