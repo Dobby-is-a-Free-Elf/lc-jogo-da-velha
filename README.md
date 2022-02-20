@@ -3,7 +3,7 @@
 ## Versão 1.0
 - Jogo funcionando corretamente, com condição de vitória;
 - Exibir jogador atual;
-- Sinalizar se "deu velha";
+- Sinalizar se "deu velha" (empate) ou jogador vitorioso;
 - Botão pra resetar o jogo;
 - Jogador inicial decidido aleatoriamente;
 - Registrar nomes dos jogadores;
