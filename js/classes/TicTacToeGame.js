@@ -2,7 +2,7 @@ export default class TicTacToeGame {
   __hasStarted = false
   __grid = ["", "", "", "", "", "", "", "", ""]
   __players = ["X", "O"]
-  __currentPlayer = 0
+  __currentPlayer = Math.round(Math.random())
   __victory = false
   __gameCounter = 0
   __maxTurns = 8
