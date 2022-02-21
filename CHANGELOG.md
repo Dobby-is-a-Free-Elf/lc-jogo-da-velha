@@ -4,6 +4,7 @@
 - Exibição do jogador atual
 - Exibição de jogador vitorioso, bloqueio do jogo caso ocorra vitória
 - Verificação e sinalização de empate - Caso 1
+- Jogador inicial aleatório
 
 ## [0.0.2] 2022-02-12
 - Implementadas as verificações de vitória
