@@ -1,4 +1,4 @@
-## Unreleased 
+## [0.0.3] 2022-02-20
 - Extrair classe TicTacToeGame para arquivo próprio
 - Adaptação do projeto para utilizar modules
 - Exibição do jogador atual
